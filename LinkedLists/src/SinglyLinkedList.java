@@ -25,6 +25,9 @@ public class SinglyLinkedList<T> {
     public void addToFront(T data) {
         // WRITE YOUR CODE HERE (DO NOT MODIFY METHOD HEADER)!
         this.head = (SinglyLinkedListNode<T>) data;
+        data.setNext(data);
+        this.head = data;
+
     }
 
     /**
@@ -38,6 +41,16 @@ public class SinglyLinkedList<T> {
     public void addToBack(T data) {
         // WRITE YOUR CODE HERE (DO NOT MODIFY METHOD HEADER)!
         this.tail = (SinglyLinkedListNode<T>) data;
+        SinglyLinkedListNode<T> newNode = (SinglyLinkedListNode<T>)data;
+        if (this.head == null) {
+            this.head = newNode;
+        } else {
+            SinglyLinkedListNode<T> current = this.head;
+            while (current.getNext() != null) {
+                current = current.getNext();
+            }
+            current.setNext(newNode);
+        }
     }
 
     /**
@@ -50,6 +63,7 @@ public class SinglyLinkedList<T> {
      */
     public T removeFromFront() {
         // WRITE YOUR CODE HERE (DO NOT MODIFY METHOD HEADER)!
+
         return this.head.getData();
     }
 
