@@ -18,6 +18,7 @@ public class SinglyLinkedListNode<T> {
      * @param data the data stored in the new node
      * @param next the next node in the list
      */
+
     SinglyLinkedListNode(T data, SinglyLinkedListNode<T> next) {
         this.data = data;
         this.next = next;
@@ -28,6 +29,7 @@ public class SinglyLinkedListNode<T> {
      *
      * @param data the data stored in the new node
      */
+
     SinglyLinkedListNode(T data) {
         this(data, null);
     }
@@ -37,6 +39,7 @@ public class SinglyLinkedListNode<T> {
      *
      * @return the data
      */
+
     T getData() {
         return data;
     }

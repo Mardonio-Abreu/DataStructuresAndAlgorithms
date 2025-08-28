@@ -24,10 +24,8 @@ public class SinglyLinkedList<T> {
      */
     public void addToFront(T data) {
         // WRITE YOUR CODE HERE (DO NOT MODIFY METHOD HEADER)!
-        this.head = (SinglyLinkedListNode<T>) data;
         data.setNext(data);
-        this.head = data;
-
+        this.head = (SinglyLinkedListNode<T>) data;
     }
 
     /**
@@ -41,9 +39,9 @@ public class SinglyLinkedList<T> {
     public void addToBack(T data) {
         // WRITE YOUR CODE HERE (DO NOT MODIFY METHOD HEADER)!
         this.tail = (SinglyLinkedListNode<T>) data;
-        SinglyLinkedListNode<T> newNode = (SinglyLinkedListNode<T>)data;
+
         if (this.head == null) {
-            this.head = newNode;
+            this.head = this.set;
         } else {
             SinglyLinkedListNode<T> current = this.head;
             while (current.getNext() != null) {
